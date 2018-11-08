@@ -13,22 +13,24 @@
 <body>
     <header>
         <div class="fixed">
-        <a href="index.html" class="logo">LoveLviv</a>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#guides">Guides</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
-        <a href="instagram.com" class="insta"><img src="img/insta.png" alt = "instagram" width="24"></a>
+             <div class="content">
+                <a href="index.html" class="logo">LoveLviv</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+                <a href="instagram.com" class="insta"><img src="img/insta.png" alt = "instagram" width="24"></a>
+            </div>
         </div>
     </header>
     
     <main>
         <section class="index-banner">
-            <div class="big_screen>"
+            <div class="content">
             <h1>New level of your travel</h1>
             <h2>Guides and tips about Lviv for your best experience</h2>
             <div class="button-container">
@@ -48,7 +50,7 @@
             </div>
             </div>
         </section>
-            
+           
         <section class="works">
             <h2>HOW IT WORKS</h2>
                 <div class="wrapper">
@@ -76,64 +78,58 @@
                     </div>
                 </div>  
         </section> 
-        
+         <hr>
         <section class="booking">
-            <h2>BOOKING</h2>
-                <div class="wrapper">
-        <form>
-  <div class="form-group row">
-    <label for="inputEmail3" class=" .col-form-label-sm">Email</label>
-    <div class="col-lm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword3" class=".col-form-label-sm">Password</label>
-    <div class="col-lm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-lm-2 pt-0">Select you tour</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            Privat guide
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            Group tour
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
-            Walk and photo
-          </label>
-        </div>
-      </div>
-    </div>
-  </fieldset>
-  <div class="form-group row">
-    <div class="col-lm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1">
-        <label class="form-check-label" for="gridCheck1">
-          Use information as registartion
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-</form>
-                </div>
-        </section>
-    </main>
-    <footer>
+            <h2>BOOKING FORM</h2>
+                <form method="POST" action="https://formspree.io/annazolotukha@gmail.com">
+                        
+                        <legend>Personal Information</legend>
+                            <label for="name">Name:</label>
+                                <input type="text" name="name" id="client-name" required>
+
+                            <label for="surname">Surname:</label>
+                                <input type="text" name="surnname" id="client-name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" name ="client-email">
+ 
+                            
+                            <label  for="phone"> Phone:</label>
+                            <input type="tel" name="Phone" pattern = "[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
+
+                            <select name ="group">
+                                <option value = ""> </option>
+                                <option value = "small">Privat (no more 2 adults)</option>
+                                <option value = "medium">Group (from 2 to 7)</option>
+                                <option value = "wandphoto">Walk'n'Photo (no more 2 adults)</option>
+                            </select>
+                              <br>  
+                              
+                              <legend>Choose the date</legend>
+                                <input type="date" name="date" min="2018-11-02">
+                                 <input type="number" name="numberOfGuests" min="1" max="10">
+                                <br>  
+                                
+                                <legend>Select guide language</legend> 
+                            <select name ="language">
+                                <option value = "EN">EN</option>
+                                <option value = "PL">PL</option>
+                                <option value = "UK">UK</option>
+                                <option value = "RU">RU</option>
+                            </select>
+                              <br> 
+                    
+                        <br>
+                        <input type="Submit" name="Confirm">
+                        <input type="Reset" name="Cancel">
+                        
+        </form>
+        </section>    
+        
+</main>
+
+<footer>
+        <div class = "content">
         <ul>
             <li>
                 About
@@ -154,7 +150,8 @@
             <img src="img/insta.png" width="24" alt="instagram logotype">
         </a>
         </div>
-    </footer>
+        </div>
+</footer>
 
     <script src="js/index.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>

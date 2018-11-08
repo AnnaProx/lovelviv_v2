@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #f3f3f3
-  
+    background-color: #f3f3f3;
+    
 }
 
 header {
@@ -14,11 +14,18 @@ header {
     width: 100%;
     height: 100px;
     padding: 20px 10px;
+    max-width: none;
+ 
+}
+.content {
+    max-width: 1600px;
+    margin: 0 auto; 
 }
 
 header .fixed {
     position: fixed;
-    top:0; left:0;
+    top:0; 
+    left:0;
     width: 100%; /*limited width*/
     background-color: #fff;
     height: 100px; /* need smaller*/
@@ -237,7 +244,7 @@ main .button {
 
 .card {
   padding: 0;
-  margin: auto;
+  margin: 0 auto;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -247,7 +254,7 @@ main .button {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     min-width: 300px;
-    max-width: 1800px;
+    max-width: 1600px;
 }
 
 .card:hover {
@@ -327,12 +334,13 @@ background-color: #FFDC00;
  
 .works {
     padding: 0px 40px 40px 40px;
-    margin: auto;
-    max-width: 1800;
+    margin: 0 auto;
+    max-width: 1600px;
 }
+
 .works h2 {
     padding: 0 0 20px 0;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -349,10 +357,9 @@ background-color: #FFDC00;
 }
 
 .steps {
+    min-width: 150px;
     max-width: 300px;
-    min-width: 250px;
-    padding: 0;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -360,6 +367,8 @@ background-color: #FFDC00;
 
 }
 .steps h3 { 
+    padding: 0 0 20px 0;
+    margin: 0 auto;
     font-weight: 900;
     color: #FFDC00;
     text-align: left;
@@ -372,27 +381,34 @@ background-color: #FFDC00;
     font-size: 16px;
     line-height: 24px;
     color: rgba(0,0,0,0.6);
-    text-align: justify;
+    text-align: left;
+    max-width: 250px;
 }
 
 @media only screen and (min-width: 980px) {
- .wrapper {
+    .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 24px;
     align-items: start;
-    grid-auto-rows: 50px;
+    grid-auto-rows: 100px;
     }
     .works h2 {
     text-align: left;
     }
 } 
 
+hr {
+    max-width: 600px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
 /*booking*/
 .booking {
     padding: 40px 40px 40px 40px;
-    margin: 40px 40px 40px 40px;
-    max-width: 1800;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .booking h2 {
@@ -406,12 +422,38 @@ background-color: #FFDC00;
     text-align: left;
 }
 
+legend { 
+    min-width: 150px;
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0 20px 0;
+    font-weight: 900;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0,0,0,0.6);
+}
+
+
+label {
+        padding: 20px 20px 0px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0,0,0,0.6);
+    text-align: justify;
+    max-width: 250px;
+}
+
+.input {
+    border-color: grey;
+}
+
 /*footer*/
 
 footer {
     width: 100%;
-    height: 200px;
-    padding: 20px 40px 40px 40px;
+    padding: 20px 40px 20px 40px;
     margin-top: 40px;
     background-color: #111;
     overflow: hidden;
@@ -420,7 +462,6 @@ footer {
 footer ul{
     width: fit-content;
     float: left;
-    padding-left: 10px;
 }
 
 footer ul li {
