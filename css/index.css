@@ -22,6 +22,7 @@ header {
     margin: 0 auto; 
 }
 
+
 header .fixed {
     position: fixed;
     top:0; 
@@ -111,7 +112,7 @@ header .insta {
 .index-banner h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 60px;
-    color: #fff;
+    color: 0b355c;
     text-align: left;
     font-weight: 900;
     line-height: normal;
@@ -122,13 +123,14 @@ header .insta {
 
 .index-banner h2 {
 font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #fff;
+    font-size: 20px;
+    color: 0b355c;
     text-align: left;
     font-weight: 100;
     display: block;
-    line-height: 40px;
+    line-height: 28px;
     padding-left: 40px;
+    margin: 20px 0 20px 0;
 }
 
 
@@ -185,53 +187,6 @@ main .button {
     main .about {
     display: none;
 }
-/*
-@media only screen and (min-width: 980px) {
-    main .about {
-    display: block;
-    margin: 40px 40px 40px 40px;
-    }
-    .about img {
-    float: left;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    }
-    .about_text {
-    margin-left: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #111;
-    text-align: left;
-    }
-    h1 .about_text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px;
-    margin-bottom: 40px;
-    }
-    .about_button {
-    background-color: #FFDC00;
-    border-radius: 6px;
-    border: none;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: none; 
-    color: white; 
-    border: none;
-    }
-
-    .button:hover {
-    background-color:  #FFE95F;
-    color: white;
-    }
-}*/
-
 
 /*card*/
 
@@ -245,7 +200,6 @@ main .button {
 .card {
   padding: 0;
   margin: 0 auto;
-  cursor: pointer;
   font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -370,7 +324,6 @@ background-color: #FFDC00;
     padding: 0 0 20px 0;
     margin: 0 auto;
     font-weight: 900;
-    color: #FFDC00;
     text-align: left;
     font-size: 20px;
     line-height: 26px;
@@ -402,18 +355,21 @@ hr {
     max-width: 600px;
     min-width: 100px;
     margin: 0 auto;
+    height: 1px;
+    
 }
 
 /*booking*/
+
 .booking {
-    padding: 40px 40px 40px 40px;
+    padding: 0px 40px 40px 40px;
     margin: 0 auto;
     max-width: 1600px;
 }
 
 .booking h2 {
     padding: 0 0 20px 0;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -422,32 +378,128 @@ hr {
     text-align: left;
 }
 
-legend { 
-    min-width: 150px;
-    max-width: 300px;
-    margin: 0 auto;
+form {
+    width: 600px;
+    min-width: 250px;
     font-family: 'Roboto', sans-serif;
-    padding: 0 0 20px 0;
-    font-weight: 900;
-    text-align: left;
+}
+
+fieldset{
+    margin: 0 auto;
+    padding:10px 0 10px 0;
+}
+
+input {
+    outline: none;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 20px 0 0 0;
+    height: 32px;
     font-size: 16px;
     line-height: 24px;
+    color: rgba(0,0,0,0.6);
+    text-align: left;
+}
+input:focus {
+    border: 1px solid #FFDC00;
+}
+select {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+     margin: 20px 0 0 0;
+    background-color: white;
+    height: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0,0,0,0.6);
+    text-align: left;
+}
+
+
+legend p{
+display: inline-block;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    font-weight: 900;
+    text-align: left;
+    font-size: 20px;
+    line-height: 26px;
     color: rgba(0,0,0,0.6);
 }
 
 
 label {
-        padding: 20px 20px 0px 0;
+    display: block;
+    padding: 20px 10px 0 0px;
     font-size: 16px;
     line-height: 24px;
     color: rgba(0,0,0,0.6);
-    text-align: justify;
+    text-align: left;
     max-width: 250px;
 }
 
-.input {
-    border-color: grey;
+#small_input {
+        max-width: 150px;
 }
+
+div .form {
+    width:100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#submitBtn {
+    max-width: 140px;
+background-color: #FFDC00;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 20px 0 0 0;
+   
+    cursor: pointer;
+    background-color: none; 
+    color: white; 
+    border: none;
+    height: 36px;
+}
+
+#submitBtn:hover {
+    background-color:  #FFE95F;
+    color: white;
+} 
+
+#cancelBtn {
+    height: 36px;
+    margin: 20px 0 0 0;
+    max-width: 140px;
+    border: none;
+    background: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: grey;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#cancelBtn:hover {
+    color: black;
+}
+
+
+
 
 /*footer*/
 
@@ -458,7 +510,9 @@ footer {
     background-color: #111;
     overflow: hidden;
 }
-
+footer .content {
+    max-width: 1600px;
+}
 footer ul{
     width: fit-content;
     float: left;
